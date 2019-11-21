@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .player {
+            width: 40px;
+            height: 40px;
+            background: #000;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            margin: 50px auto;
+            position: absolute;
+        }
+
+        .anima {
+            animation: drift 3000ms infinite linear;
+
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+            background: blue;
+        }
+
+        @keyframes drift {
+            from {
+                transform: rotate(0deg);
+            }
+
+            from {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" tabindex="0" v-on:keydown="mover">
+        <div class="player"></div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                y: 0,
+                x: 0,
+                speed: 2
+            },
+            methods: {
+                mover(event) {
+                    const player = document.querySelector(".player")
+                    if (event.key==="ArrowDown") {
+                        player.style.top = `${this.y * this.speed}px`
+                        this.y++
+                    }
+                    if (event.key === "ArrowUp") {
+                        player.style.top = `${this.y * this.speed}px`
+                        this.y--
+                    }
+                    if (event.key === "ArrowLeft") {
+                        player.style.left = `${this.x * this.speed}px`
+                        this.x--
+                    }
+                    if (event.key === "ArrowRight") {
+                        player.style.left = `${this.x * this.speed}px`
+                        this.x++
+                    }
+                    if (event.key === "ArrowRight") {
+                        player.style.left = `${this.x * this.speed}px`
+                        this.x++
+                    }
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
