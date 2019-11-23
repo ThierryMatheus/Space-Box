@@ -12,48 +12,51 @@
             margin: 0;
             padding: 0;
         }
-
         .player {
-            width: 40px;
-            height: 40px;
+            width: 80px;
+            height: 80px;
             background: #000;
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
             margin: 50px auto;
             position: absolute;
         }
-
         .anima {
             animation: drift 3000ms infinite linear;
-
         }
-
         html,
         body {
             width: 100%;
             height: 100%;
         }
-
         #app {
             width: 100%;
             height: 100%;
             background: blue;
         }
-
         @keyframes drift {
             from {
                 transform: rotate(0deg);
             }
-
             from {
                 transform: rotate(360deg);
             }
         }
+
+
+    .player{
+  transition: width 2s, height 2s, transform 3s;
+}
+
+.player:hover {
+  
+  transform: rotate(360deg);
+}
     </style>
 </head>
 
 <body>
     <div id="app" tabindex="0" v-on:keydown="mover">
-        <div class="player"></div>
+        <div  class="player"></div>
     </div>
     <script>
         const vm = new Vue({
@@ -61,8 +64,10 @@
             data: {
                 y: 0,
                 x: 0,
-                speed: 2
+                speed: 5
             },
+
+
             methods: {
                 mover(event) {
                     const player = document.querySelector(".player")
@@ -86,7 +91,6 @@
                         player.style.left = `${this.x * this.speed}px`
                         this.x++
                     }
-
                 }
             }
         })
