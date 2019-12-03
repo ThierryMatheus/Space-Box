@@ -1,0 +1,40 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .app {
+            width: 25px;
+            height: 25px;
+            background: #000;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            margin: 50px auto;
+            position: absolute;
+        }
+        .anima {
+            animation: drift 3000ms infinite linear;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        #app {
+            width: 100%;
+            height: 100%;
+            background: blue;
+        }
+        @keyframes drift {
+            from {
+                transform: rotate(0deg);
+            }
+            from {
+                transform: rotate(360deg);
+            }
+        }
+    .player{
+  transition:transform 2s;
+}
+.player:hover {
+  
+  transform: rotate(360deg);
+}

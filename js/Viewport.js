@@ -1,0 +1,60 @@
+class Viewport{
+	x = 0;
+	y = 0;
+	width = 0;
+	height = 0;
+	constructor(w,h){
+		this.width = w;
+		this.height = h;
+	}
+  coords() {
+    let edges = {
+      't': this.y + this.height,
+      'r': this.x + this.width,
+      'b': this.y,
+      'l': this.x
+    };
+    let corners = {
+      'tl': [edges.l, edges.t],
+      'tr': [edges.r, edges.t],
+      'bl': [edges.l, edges.b],
+      'br': [edges.r, edges.b]
+    }
+    return {...edges, ...corners};
+  }
+  centralizeIn(player, world) {
+    this.x = 0
+    this.y = 0
+    if (player.x > this.width / 2) {
+      this.x = Math.min(player.x - (this.width / 2), world.width - this.width)
+    }
+    if (player.y > this.height / 2) {
+      this.y = Math.min(player.y - (this.height / 2), world.height - this.height)
+    }
+}
+  style() {
+    return `width: ${this.width}px, height: ${this.height}px`;
+  }
+
+  styleFor(element) {
+    let style = element.style()
+    style.left = element.x - this.x
+    style.top = this.height - element.height - (element.y - this.y)
+    style.left += 'px'
+    style.top += 'px'
+    style.width += 'px'
+    style.height += 'px'
+
+    if (element.width == Infinity) {
+      style.left = 0
+      style.width = '100%'
+    }
+    if (element.height == Infinity) {
+      style.top = 0
+      style.height = '100%'
+    }
+    return style;
+  }
+}
+  
+
