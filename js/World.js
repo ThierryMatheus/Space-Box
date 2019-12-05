@@ -1,11 +1,12 @@
-class World{
-    width = 0
-    height = 0
-    viewport = null
-    player = null
-    asteroids = null
-    bullets = null
+width = 0;
+height = 0;
+viewport = null;
+player = null;
+asteroids = null;
+bullets = null;
 
+
+class World{
     constructor(window, w = Infinity, h = Infinity, width) {
         this.width = w
         this.height = h

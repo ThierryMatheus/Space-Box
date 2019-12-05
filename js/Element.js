@@ -1,9 +1,10 @@
-class Element {
-	x = 0
-	y = 0
-	width = 0
-	height = 0
+x = 0;
+y = 0;
+width = 0;
+height = 0;
 
+
+class Element {
 	constructor(x,y,width,height) {
 		this.x = x
 		this.y = y
