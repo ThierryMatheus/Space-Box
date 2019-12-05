@@ -2,7 +2,7 @@
             margin: 0;
             padding: 0;
         }
-        .player {
+        #nave {
             width: 25px;
             height: 25px;
             background: #000;
@@ -10,7 +10,7 @@
             margin: 50px auto;
             position: absolute;
         }
-        .anima {
+        #anima {
             animation: drift 3000ms infinite linear;
         }
         html,
@@ -31,10 +31,10 @@
                 transform: rotate(360deg);
             }
         }
-    .player{
+    #nave{
   transition:transform 2s;
 }
-.player:hover {
+#nave:hover {
   
   transform: rotate(360deg);
 }
