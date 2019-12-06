@@ -52,4 +52,4 @@ class Element {
   }
 }
 
-module.exports = Element
+module.exports = Element;

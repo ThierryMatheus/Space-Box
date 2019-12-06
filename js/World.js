@@ -1,7 +1,7 @@
 width = 0;
 height = 0;
 viewport = null;
-SpaceShip = null;
+player = null;
 asteroids = null;
 bullets = null;
 
@@ -12,7 +12,7 @@ class World{
         this.height = h
 
         this.setViewportFor(window)
-        this.SpaceShip =  new Player(25,25)
+        this.player =  new Player(25,25)
     }
     setViewportFor(window){
     	this.viewport = new Viewport(

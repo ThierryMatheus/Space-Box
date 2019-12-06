@@ -9,6 +9,8 @@ const wd = require('./js/World.js');
 const e = require('./js/Element.js');
 const me = require('./js/MoveableElement.js');
 const vp = require('./js/Viewport.js');
+const p = require('./js/Player.js');
+const b = require('./js/Bullet.js');
 
 console.log(e);
 console.log(me)

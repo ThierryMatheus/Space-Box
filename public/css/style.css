@@ -10,9 +10,6 @@
             margin: 50px auto;
             position: absolute;
         }
-        #anima {
-            animation: drift 3000ms infinite linear;
-        }
         html,
         body {
             width: 100%;
@@ -23,18 +20,3 @@
             height: 100%;
             background: blue;
         }
-        @keyframes drift {
-            from {
-                transform: rotate(0deg);
-            }
-            from {
-                transform: rotate(360deg);
-            }
-        }
-    #nave{
-  transition:transform 2s;
-}
-#nave:hover {
-  
-  transform: rotate(360deg);
-}
