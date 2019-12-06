@@ -1,3 +1,7 @@
+const Element = require('./Element.js')
+
+//import Element from 'Element.js'
+//const Element = require('./Element.js')
 vel = [0, 0];
 
 class MoveableElement extends Element {
@@ -7,3 +11,5 @@ class MoveableElement extends Element {
 	}
 
 }
+
+module.exports = MoveableElement

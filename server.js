@@ -5,10 +5,13 @@ const app = express();
 const server= require('http').createServer(app);
 const io = require('socket.io')(server);
 
-//const wd = require('./js/World.js');
-//const e = require('./js/Element.js');
-//const me = require('./js/MoveableElement.js');
-//const vp = require('./js/Viewport.js');
+const wd = require('./js/World.js');
+const e = require('./js/Element.js');
+const me = require('./js/MoveableElement.js');
+const vp = require('./js/Viewport.js');
+
+console.log(e);
+console.log(me)
 
 app.use(express.static(path.join(__dirname,'public'
 )));

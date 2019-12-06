@@ -23,14 +23,14 @@ class Viewport{
     }
     return {...edges, ...corners};
   }
-  centralizeIn(player, world) {
+  centralizeIn(SpaceShip, world) {
     this.x = 0
     this.y = 0
-    if (player.x > this.width / 2) {
-      this.x = Math.min(player.x - (this.width / 2), world.width - this.width)
+    if (SpaceShip.x > this.width / 2) {
+      this.x = Math.min(SpaceShip.x - (this.width / 2), world.width - this.width)
     }
-    if (player.y > this.height / 2) {
-      this.y = Math.min(player.y - (this.height / 2), world.height - this.height)
+    if (SpaceShip.y > this.height / 2) {
+      this.y = Math.min(SpaceShip.y - (this.height / 2), world.height - this.height)
     }
 }
   style() {

@@ -51,3 +51,5 @@ class Element {
     return true
   }
 }
+
+module.exports = Element
