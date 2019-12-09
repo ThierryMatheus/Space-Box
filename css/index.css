@@ -1,0 +1,64 @@
+body {
+  background-image: url("http://www.graciaviva.cat/png/big/13/138961_pixel-art-space-background.png");
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+
+@keyframes h2{
+  0%  {color: pink;}
+  25% {color: blue;}
+  50% {color: orange;}
+  75% {color: red;}
+  100%{color: white;}
+}
+
+h1{
+  font-family:blocks;
+  font-size:100px;
+  display: inline-block;
+  margin-bottom: 170px;
+}
+
+h2{
+  font-family:blocks;
+  animation: h2 1s infinite;
+  font-size:60px;
+  /*display: inline-block;*/
+  /*margin-bottom: none;*/
+  color: white;
+  margin-bottom: -9%;
+}
+
+ @font-face {
+  font-family:blocks;
+  src: url("../font/baby_blocks.woff");
+}
+
+.cadastro {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 350px;
+  background: #ffff;
+  box-shadow: rgb(0, 0, 0) 0px 6px 50px;
+  opacity: 1;
+  /*position: relative;*/
+  height: 45px;
+  border-radius: 29px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  overflow: hidden;
+  display: inline-block;
+
+}
+
+.show {
+  display: block;
+}
+#te{
+  background-image: url('../img/a.png');
+}
